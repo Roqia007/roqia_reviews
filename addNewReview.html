@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>New Review</title>
+    </head>
+    <body>
+        <header>
+            <h1>Roqia's reviews</h1>
+            <!-- You can't use it more than once because of the page structure-->
+            <img src ="books_photos/download (1).jpg" alt ="" width ="100%" height ="400px">
+             <p> <i>Let's close the chapter of this book.</i> </p>
+             
+        </header>
+        <main>
+            <h2>let's make our library bigger!!</h2>
+            <hr>
+            <form action="" method="post">
+                <div class="Book_name">
+                    <label for="book_name">Book Name</label>
+                    <input type="text" id="book_name" name="book_name" required>
+                </div>
+                <br>
+                <div class="Type">
+                    <label for="bt">Book type</label>
+                    <select name="book_type" id="bt" required >
+                        <option value="Romance">Romance book</option>
+                        <option value="crime">Crime book</option>
+                        <option value="fantasy">Fantasy book</option>
+                        <option value="Dark_Romance">Dark romance book</option>
+                    </select>
+                </div>
+                <div class="Book_cover">
+                    <br>
+                    <label for="Book_cover">Please upload the book cover:</label>
+                    <br>
+                    <input type="file" id="Book_cover" name="Book_cover" required>
+                </div>
+                <fieldset>
+                    <legend>is this book in a series?</legend>
+                    <input type="radio" name="series" value="Yes" id="Yes">
+                    <label for="Yes">Yes</label>
+                    <input type="radio" name="series" value="No" id="No">
+                    <label for="No">No</label>
+                </fieldset>
+                <br>
+                <!-- <label for="stars">How many stars do you give it ?</label>
+                <input type="number" value="0" step="1" max="5" min="0" id="stars"> -->
+                <label for="stars">how much do you love it ?</label>
+                <input type="range" value="0" step="20" name="stars" id="stars" required>
+                <div class="startedReading" >
+                    <label for="startedReading">When you <i>started</i> it ?</label>
+                    <br>
+                    <input type="date" name="beginReading" id="startedReading" required >
+                </div>
+                <div class="endedReading" >
+                    <label for="endedReading">When you <i>finished</i> it ?</label>
+                    <br>
+                    <input type="date" name="finishedReading" id="endedReading" required>
+                </div>
+                <hr>
+                <br>
+                <textarea placeholder="yap as you like &lt 3" cols="40" rows="15" name="The_review" required></textarea>
+                <br>
+                <input type="submit" value="save">
+            </form>
+        </main>
+    </body>
+</html>
