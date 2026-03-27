@@ -1,100 +1,48 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <!-- meta charset defines the type of the characters we use in the websites -->
         <meta charset = "UTF-8">
-       <!-- what's appear in the clickable link and the bar -->
-        <title>roqia's reviews</title>
-        <!-- meta name description is what appear under the clickable link -->
-        <meta name = "description" content ="there is self used website where i yap about books">
-        <style>
-             /* we use css code here  
-             the comments in css are different from html*/
-
-        </style>
+        <title>Log in</title>
     </head>
     <body>
-      <main>
-      <header>
-        <h1>Roqia's reviews</h1>
-        <div class="search">
-                <input type="search" >
+        <header>
+            <h1>Roqia's reviews</h1>
+            <!-- You can't use it more than once because of the page structure-->
+            <img src ="books_photos/download (1).jpg" alt ="" width ="100%" height ="400px">
+             <p> <i>I rate the books I've read here.</i> </p>
+             <!-- i is a html formatting command remember to search what the difference between it and em is -->
+              <h2>Log in</h2>
+        </header>
+        <form action ="Home.html" method = "post">
+            <!-- you write where the data will be transformed in the action attribute
+             method => you use post if you don't want them to appear in the URL & get if you want them to appear in the URL -->
+            <div class="User_name">
+             <label>User Name</label>
+             <input type= "text" placeholder = "Enter Your User Name" name = "User_name" required minlength="3" maxlength="8">
             </div>
-        <img src ="books_photos/download (1).jpg" alt ="" width ="100%" height ="400px">
-          <!-- You can't use it more than once because the page structure-->
-           <p> <i>I rate the books I've read here.</i> </p>
-           <!-- i is a html formatting command remember to search what the difference between it and em is -->
-      </header>
-        <hr> 
-        <a href="addNewReview.html" target="_blank">Do you want to add new review?</a>
-         <h2>Romance Books</h2>
-           <!-- 
-            ul=> is un ordered list
-            it contains only 'li's 
-            li => iy's a box of information (it contains the div , img , texts and links) 
-            div=> it's the designing box
-            -->
-         <section class = "Romance_books">
-           <ul>
-            <li>
-             <article class ="book">
-              <b><a href ="theSevenYearSlip.html" target="_blank" title = "Go to know more information">The seven year slip</a></b>
-              <img src ="books_photos/The Seven Year Slip.jpg" alt ="The Seven Year Slip cover" width ="400px" height ="500px">
-             </article>
-            </li>
-            <li>
-             <article class ="book">
-              <b><a href="TheCheatSheet.html" title = "Go to know more information" target="_blank">The cheat sheet</a></b>
-              <img src ="books_photos/The Cheat Sheet_ A Novel.jpg" alt ="The Cheat Sheet cover" width ="400px" height ="500px">
-             </article>
-            </li>
-           </ul>
-          </section>
-           <!-- href tranform you to a link or an anther code or a specific paragraph
-            when you leave the mouse on the link for a sec the words inside the 'title' attribute will appear
-            target_blank will transfer you to another tap to open the page --> </div>
-        <hr>
-         <h2>Fantasy books</h2>
-          <section class = "Fantasy_books">
-            <ul>
-              <li>
-                <article class ="book">
-                 <b><a href = "theCruelPrince.html" title = "Go to know more information" target="_blank">The cruel prince</a></b>
-                 <img src ="books_photos/The Cruel Prince (The Folk of the Air).jpg" alt ="The Cruel Prince cover" width ="400px" height ="500px">
-                </article>
-              </li>
-              <li>
-                <article class ="book">
-                 <b><a href = "onceUponABrokenHeart.html" title = "Go to know more information" target="_blank">Once upon a broken heart</a></b>
-             <img src ="books_photos/Once Upon A Broken Heart_ Stephanie Garber.jpg" alt ="Once Upon A Broken Heart cover" width ="400px" height ="500px">
-                </article>
-              </li>
-              <li>
-                <article class ="book">
-                  <b><a href = "powerless.html" title = "Go to know more information" target="_blank">powerless</a></b>
-                  <img src ="books_photos/Powerless by Lauren Roberts.jpg" alt ="Powerless cover" width ="400px" height ="500px">
-                </article>
-              </li>
-              <li>
-                <article class ="book">
-                  <b><a href = "theMazeRunner.html" title = "Go to know more information" target="_blank">The maze runner</a></b>
-                  <img src ="books_photos/25 Dystopian Novels to Read in 2024 - Fantasy World Journal.jpg" alt ="The Maze Runner Cover" width ="400px" height ="500px">
-                </article>
-              </li>
-            </ul>
-             </section>
-         <hr>
-             <h2>Dark romance</h2>
-             <section class = "Dark_romance">
-              <ul>
-                <li><b><a href = "twistedLove.html" title = "Go to know more information" target="_blank">Twisted Love</a></b>
-                <img src ="books_photos/Twisted Love - Special Edition by Ana Huang Paperback _ Indigo Chapters.jpg" alt ="Twisted Love cover" width ="400px" height ="500px"></li>
-              </ul>
-           </section>
-           <footer>
-            <hr>
-            <p><strong>if you want to discuss any book with me contact <a href="mailto: roqiamostafa733@gmail.com" target="_self">roqiamostafa733@gmail.com</a></strong></p>
-           </footer>
-      </main>
+             <br>
+            </div> 
+            <div class="Email">
+             <label>Gmail</label>
+             <input type = "email" placeholder = "ex: name@gmail.com" name = "email" required>
+            </div>
+            <br>
+            <div class="Password">
+             <label>Password</label>
+             <input type = "password" placeholder = "Complex one" name = "Password" required minlength="6" maxlength="8">
+            </div>
+            <br>
+            <div class="reader">
+                <input type="radio" name="Role" value="Reader" id="Reader">
+                <label for="Reader">Reader</label>
+            </div>
+            <div class="Roqia">
+                <input type="radio" name="Role" value="Roqia" id="Roqia">
+                <label for="Roqia">Roqia</label>
+                <!-- I will be the only writer -->
+            </div>
+            <br>
+            <input type = "submit" value = "Save">
+        </form>
     </body>
 </html>
